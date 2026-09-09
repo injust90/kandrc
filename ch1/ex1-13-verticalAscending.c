@@ -25,10 +25,26 @@ int main () {
             ++nother;
 
     for (i = 0; i < 10; ++i) {
-	    printf("%d: ", i);
-	    for (j = 0; j < ndigit[i]; ++j) {
-			printf("*");
-		}
-	    printf("\n");
+	    printf("%d ", i);
     }
+    printf("\n");
+    int max = 0;
+    // Checking for max to determine the depth/height of the numbers that need to be printed
+    for (i = 0; i < 10; ++i) {
+	    if (ndigit[i] > max) {
+		    max = ndigit[i];
+	    }
+    }
+
+    printf("MAX: %d", max);
+
+    // Now that we have depth, we will use it to print out the length of the digits.
+	
+    /*
+    for (j = 0; j < 10; ++j) {
+	    if(ndigit[i] > 0) {
+		    printf("* ");
+	    }
+    }
+    */
 }
