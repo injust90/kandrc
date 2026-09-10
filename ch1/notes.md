@@ -23,16 +23,18 @@
       * *
         *
 
-## Draw a horizontal histogram
+## Draw a horizontal histogram for the lengths of words.
 
-input: 122333444
+// for every input, ignore whitespace, and count the number of letters in each word
 
-0: 
+
+a bb 22 ccc 333 333 dddd 4444 4444 4444 eeeee 55555 55555 55555 55555
+
 1: *
 2: **
 3: ***
 4: ****
-5:
+5: *****
 6:
 7:
 8:

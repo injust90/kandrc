@@ -17,7 +17,8 @@ int main () {
 
     // Until end of file, count characters
     while ((character = getchar()) != EOF)
-        if (character >= '0' && character <= '9')
+	    // Counter to count each word?
+        if (character >= 'a' && character <= 'Z')
             ++ndigit[character-'0'];
         else if  (character == ' ' || character == '\n' || character == '\t')
             ++nwhite;

@@ -1,11 +1,6 @@
-# Accessibility Goal
-Make it work for everyone.  
-Period and end of story.  
-*Nothing about us without us*
-
 ## Programmer's Oath 
 Code writes and now my watch begins.  
-Read my words and bear witness to my vow.  
+Hear my words and bear witness to my vow.  
 It shall not end until my death.  
 I shall live and die by my code.  
 I shall wear no crowns and win no glory.  
