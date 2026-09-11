@@ -6,45 +6,63 @@
 
 /* count digits, white space, others */
 int main () {
-    int character, i, nwhite, nother;
+    int c, i, nwhite, nother;
     int j = 0;
-    int ndigit[10];
+    int word_count = 0;
+    int dword[10];
 
     nwhite = nother = 0;
     // set starting numbers to 0
     for (i = 0; i < 10; ++i)
-        ndigit[i] = 0;
+        dword[i] = 0;
+    dword[3] = 3;
 
     // Until end of file, count characters
-    while ((character = getchar()) != EOF)
-        if (character >= '0' && character <= '9')
-            ++ndigit[character-'0'];
-        else if  (character == ' ' || character == '\n' || character == '\t')
-            ++nwhite;
-        else
+    while ((c = getchar()) != EOF) {
+	if (c >= 'a' && c <= 'z') {
+		++word_count;
+	}
+        else if  (c == ' ' || c == '\n' || c == '\t') {
+		if (word_count != 0) {
+			++dword[word_count];
+		}
+		word_count = 0;
+	}
+        else {
             ++nother;
-
-    for (i = 0; i < 10; ++i) {
-	    printf("%d ", i);
+	}
     }
-    printf("\n");
+    
     int max = 0;
-    // Checking for max to determine the depth/height of the numbers that need to be printed
-    for (i = 0; i < 10; ++i) {
-	    if (ndigit[i] > max) {
-		    max = ndigit[i];
-	    }
-    }
-
-    printf("MAX: %d", max);
-
-    // Now that we have depth, we will use it to print out the length of the digits.
-	
+    // Checking for max to determine the height of the numbers that need to be printed
     /*
-    for (j = 0; j < 10; ++j) {
-	    if(ndigit[i] > 0) {
-		    printf("* ");
+    for (i = 0; i < 10; ++i) {
+	    if (dword[i] > max) {
+		    max = dword[i];
 	    }
     }
     */
+
+    // Now that we have max, we will use it to print out the columns 
+    /*
+    for (i = 0; i < max; ++i) {
+	    for (j = 0; j < 10; ++j) {
+		    if(dword[j] == (max - i)) {
+		    // Another for loop to print spaces
+			    for (int k = 0; k < j; ++k) {
+				    printf(" ");
+			    }
+			    // printf("*");
+		    }
+	    }
+	    printf("\n");
+    }
+    */
+
+
+    // Print out the row of numbers
+    for (i = 0; i < 10; ++i) {
+	    printf("%d", i);
+    }
+    printf("\n");
 }
