@@ -40,10 +40,10 @@ int main () {
 	    }
     }
 
-    // TODO Check for JUST one ROW
+    // Check for JUST one ROW
     for (i = 0; i < max; ++i) {
-        // Print out the dword @ the location of the array's word (in this case 3)
-        // Column: Print out space(s) the length of the location (in this case 3)
+        // Print out the dword @ the location of the array's word
+        // Column: Print out space(s) the length of the location
         for (j = 0; j < 10; ++j) {
             // Print out | if >= max, else print *
             if (dword[j] >= max - i) {

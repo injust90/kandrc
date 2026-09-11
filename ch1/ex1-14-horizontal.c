@@ -26,7 +26,7 @@ int main() {
         }
     }
 
-    // TODO print out row by row, starting with the number count
+    // print out row by row, starting with the number count
     for (i =  0; i < 26; ++i) {
         printf("%c ", 'a' + i);
         for (int j = 0; j < ndigit[i]; ++j) {
