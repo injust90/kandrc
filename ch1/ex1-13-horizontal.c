@@ -6,9 +6,10 @@
 
 /* count digits, white space, others */
 int main () {
-    int character, i, nwhite, nother;
-    int j = 0;
+    int c, i, nwhite, nother;
     int ndigit[10];
+    int word_count = 0;
+    int jp_word_count = 0;
 
     nwhite = nother = 0;
     // set starting numbers to 0
@@ -16,20 +17,24 @@ int main () {
         ndigit[i] = 0;
 
     // Until end of file, count characters
-    while ((character = getchar()) != EOF)
-	    // Counter to count each word?
-        if (character >= 'a' && character <= 'Z')
-            ++ndigit[character-'0'];
-        else if  (character == ' ' || character == '\n' || character == '\t')
-            ++nwhite;
-        else
+    while ((c = getchar()) != EOF) {
+	if (c >= 'a' && c <= 'z') {
+		// printf("%c\n" , c);
+		++word_count;
+	}
+        else if  (c == ' ' || c == '\n' || c == '\t') {
+		++ndigit[word_count];
+		word_count = 0;
+	}
+        else {
             ++nother;
-
+	}
+    }
     for (i = 0; i < 10; ++i) {
 	    printf("%d: ", i);
-	    for (j = 0; j < ndigit[i]; ++j) {
-			printf("*");
-		}
+	    for (int j = 0; j < ndigit[i]; ++j) {
+		    printf("*");
+	    }
 	    printf("\n");
     }
 }
