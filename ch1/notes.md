@@ -1,5 +1,11 @@
 # Exercise 1-13
 
+## Dword example for testing
+   *
+   *
+   *
+0123456789
+
 ## Draw a vertical histogram
         *
       * *

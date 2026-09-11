@@ -15,7 +15,6 @@ int main () {
     // set starting numbers to 0
     for (i = 0; i < 10; ++i)
         dword[i] = 0;
-    dword[3] = 3;
 
     // Until end of file, count characters
     while ((c = getchar()) != EOF) {
@@ -35,30 +34,26 @@ int main () {
     
     int max = 0;
     // Checking for max to determine the height of the numbers that need to be printed
-    /*
     for (i = 0; i < 10; ++i) {
 	    if (dword[i] > max) {
 		    max = dword[i];
 	    }
     }
-    */
 
-    // Now that we have max, we will use it to print out the columns 
-    /*
+    // TODO Check for JUST one ROW
     for (i = 0; i < max; ++i) {
-	    for (j = 0; j < 10; ++j) {
-		    if(dword[j] == (max - i)) {
-		    // Another for loop to print spaces
-			    for (int k = 0; k < j; ++k) {
-				    printf(" ");
-			    }
-			    // printf("*");
-		    }
-	    }
-	    printf("\n");
+        // Print out the dword @ the location of the array's word (in this case 3)
+        // Column: Print out space(s) the length of the location (in this case 3)
+        for (j = 0; j < 10; ++j) {
+            // Print out | if >= max, else print *
+            if (dword[j] >= max - i) {
+                printf("*");
+            } else {
+                printf(" ");
+            }
+        }
+        printf("\n");
     }
-    */
-
 
     // Print out the row of numbers
     for (i = 0; i < 10; ++i) {
