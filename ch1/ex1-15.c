@@ -2,17 +2,17 @@
 
 #include <stdio.h>
 
-int temp_conv(float fahr) 
+int temp_conv(int fahr) 
 {
-    float celsius = 0;
+    int celsius = 0;
 
     celsius = 5 * (fahr - 32) / 9;
-    printf("%f\n", celsius);
     return celsius;
 }
 
 /* Print Fahrenheight-Celsius table for fahr = 0, 20, ..., 300 */
 int main()
 {
+    printf("%d\n", temp_conv(0));
     printf("%f\n", temp_conv(0));
 }
