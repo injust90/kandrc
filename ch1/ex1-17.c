@@ -46,24 +46,20 @@ int get_line(char s[], int lim)
 
 void copy(char to[], char from[])
 {
-    int i;
-    i = 0;
-    int j = 0;
-
-    int state = IN;
-    int space_counter = 0;
+    int i = 0;  // Whole array iterator
+    int k = 0;  // Space Counter 
+    int j = 0;  // Place Counter
 
     while (from[i] != '\0') {
+        int j = 0;
         if (from[i] == ' ' || from[i] == '\t') {
-            state = OUT;
-            ++j;
+            ++k;
+        }
+        else if (from[i] == '\n' || from[i] == '\0') {
         }
         else {
-            state = IN;
+            k = 0;
         }
-        if (state == IN) {
-            to[i - j] = from[i];
-        }
-        ++i;
+        to[i] = from[i + k];
     }
 }
