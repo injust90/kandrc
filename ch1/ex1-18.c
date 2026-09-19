@@ -8,6 +8,7 @@ int main()
 {
     int c;
     int i = 0;
+    int j = 0;
     int l = 0;
     int state = OUT;
 
@@ -22,7 +23,7 @@ int main()
         else if (c == '\n') {
             i = 0;
             ++l;
-            if (l == 1)
+            if (l == 1 && j != 0)
                 putchar('\n');
         }
         else {
@@ -33,6 +34,9 @@ int main()
             }
             state = IN;
             l = 0;
+            if (j < 2) {
+                ++j;
+            }
             putchar(c);
         }
     }
