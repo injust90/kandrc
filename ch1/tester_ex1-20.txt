@@ -1,5 +1,5 @@
     fourspaces        eightspaces               tab
-                  
+											
 all tabs
 
 
@@ -7,4 +7,4 @@ all tabs
 multiple blank lines
                                         
 all spaces
-         tabspace                                tabsandspaces
+			    tabspace                                tabsandspaces
