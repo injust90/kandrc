@@ -1,4 +1,4 @@
-# Exercise 1-17 Trailing tabs and spaces
+# Exercise 1-18 Trailing tabs and spaces
 
 Check to see if there are spaces and tabs at the beginning, then once we reach a character, copy the character
 
@@ -9,6 +9,7 @@ i:      0123456789ABCDEF
         0123456789
 j:      0123456789AB
 
+State is OUT, but if we hit a word, we're back in, and we re-write the previous x number of spaces
 
 array - j putchar
 Add j to i so that it "skips"

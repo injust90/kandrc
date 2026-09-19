@@ -7,7 +7,7 @@ void copy(char to[], char from[], int len);
 
 int main() 
 {
-    char from[MAXLINE];
+    char from[MAXLINE] = {};
 
     int c, i, len = 0;
 
@@ -17,7 +17,7 @@ int main()
         ++i;
     }
     
-    char to[len];
+    char to[len + 2] = {};
     reverse(to, from, len);
 }
 
@@ -40,17 +40,13 @@ void copy(char to[], char from[], int len)
 
 void reverse(char to[], char from[], int len)
 {
-    int i = 0;
     int c;
 
-    while(from[i] != '\0') {
-        if (i != '\0') {
-            to[i] = from[len - i - 1];
-        }
-        else {
-            to[i] = ' ';
-        }
-        ++i;
-    }
-    printf("%s", to + 1);
+    /*
+    for (int i = 0; from[i]; i++)
+        to[i] = from[len - i - 1];
+    */
+    for (int i = 0; from[i]; i++)
+        to[len - 1 - i] = from[i];
+    printf("%s\n", to + 1);
 }
