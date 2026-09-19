@@ -1,0 +1,10 @@
+    fourspaces        eightspaces               tab
+											
+all tabs
+
+
+
+multiple blank lines
+                                        
+all spaces
+			    tabspace                                tabsandspaces
