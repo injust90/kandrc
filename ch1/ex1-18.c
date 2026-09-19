@@ -4,42 +4,36 @@
 #define IN 1
 #define OUT 0
 
-void trail(char to[], char from[], int len);
-
 int main() 
 {
-    char from[MAXLINE];
+    int c;
+    int i = 0;
+    int l = 0;
+    int state = OUT;
 
-    int c, i, len = 0;
+    char store[MAXLINE];
 
     while((c=getchar()) != EOF) {
         if (c == ' ' || c == '\t') {
+            store[i] = c;
             ++i;
+            state = OUT;
         }
         else if (c == '\n') {
-            len -= i;
-        }
-        ++len;
-    }
-
-    char to[len];
-}
-
-void trail(char to[], char from[], int len) {
-    int i, j = 0;
-    while(from[i] != '\0') {
-        if (from[i] == ' ' || from[i] == '\t') {
-            ++j;
-        }
-        else if (c == '\n') {
-            j = 0;
-        }
-        for (int k = 0; k < j; ++k) {
-            to[i] = from[i];
+            i = 0;
+            ++l;
+            if (l == 1)
+                putchar('\n');
         }
         else {
-            j = 0;
+            if (state == OUT) {
+                for (int k = 0; k < i; ++k) {
+                    putchar(store[k]);
+                }
+            }
+            state = IN;
+            l = 0;
+            putchar(c);
         }
-        ++i;
     }
 }
