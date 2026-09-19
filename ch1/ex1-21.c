@@ -12,11 +12,15 @@ int main()
         }
         else {
             tabadd = spaces / 4;
+            spaces = spaces % 4;
+            for (int j = 0; j < spaces; ++j) {
+                putchar(' ');
+            }
             for (int i = 0 ; i < tabadd; ++i) {
                 putchar('\t');
             }
-            putchar(c);
             spaces = 0;
+            putchar(c);
         }
     }
 }

@@ -1,10 +1,12 @@
-	fourspaces		eightspaces			tab
+	fourspaces		eightspaces***			tab
 											
-alltabs
+all*tabs
 
 
 
-multipleblanklines
+multiple*blank*lines
 										
-allspaces
+all*spaces
 				tabspace								tabsandspaces
+
+abc*	hello

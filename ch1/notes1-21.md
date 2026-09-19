@@ -9,3 +9,10 @@ Output:
 If we see a space, count up to four and set the number of tabs.
 If we see a letter, just putchar.
 
+spaces = 9;
+tabadd = 2;
+spaces = 1;
+
+spaces = 5;
+tabadd = 1;
+spaces = 1;
