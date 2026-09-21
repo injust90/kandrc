@@ -1,0 +1,12 @@
+Exercise 1-24 
+Write a program to check for a C program for rudimentary syntax errors like unbalanced parentheses, brackets and braces.
+Don't forget about quotes, both single and double, escape sequences, and comments.
+(This program is hard if you do it in full generality.)
+
+If we see a parentheses then we start checking for the second one. 
+If we don't see a second one, warn the user.
+
+if(c >= '\0' && c < ' ' && (c != '\r' || c != '\n' || c != '\t'))
+  continue;
+
+Need to take the input until EOF, and then put that in an array. Let's assume that the input is less than 1000 characters for sanity's sake.
