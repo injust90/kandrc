@@ -10,3 +10,17 @@ if(c >= '\0' && c < ' ' && (c != '\r' || c != '\n' || c != '\t'))
   continue;
 
 Need to take the input until EOF, and then put that in an array. Let's assume that the input is less than 1000 characters for sanity's sake.
+
+
+if (array[i] == ';' || array[i] == '\n') {
+    pl_count = 0;
+    pr_count = 0;
+    if (p_diff > 0) {
+        p_ulcount += p_diff;
+    }
+    if (p_diff < 0) {
+        p_urcount += p_diff;
+    }
+}
+
+Use gdb to test what is happening to pl_count when array is passed to the program.

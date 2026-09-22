@@ -22,13 +22,19 @@ void unbalance_warning(char array[]) {
 
     // Check to see if ( or ) and count the difference
     while (array[i] != EOF) {
+        // If we see a quotation mark, do not count
+        if (array[i] == '"') {
+            ++i;
+            while (array[i] != '"') {
+                ++i;
+            }
+            ++i;
+        }
         if (array[i] == '(') {
             ++pl_count;
-            // printf("pl_count %d \n", pl_count);
         }
-        else if (array[i] == ')') {
+        if (array[i] == ')') {
             ++pr_count;
-            // printf("pr_count %d \n", pr_count);
         }
         p_diff = pl_count - pr_count;
         if (array[i] == ';' || array[i] == '\n') {
@@ -46,6 +52,10 @@ void unbalance_warning(char array[]) {
     // Check differences so that we warn the user
     printf("( is unbalanced by %d\n", p_ulcount);
     printf(") is unbalanced by %d\n", p_urcount * (-1));
+
+    if (array[i] == EOF) {
+        printf("%d", EOF);
+    }
 }
 
 // copy: copy 'from' into 'to'; assume is big enough
